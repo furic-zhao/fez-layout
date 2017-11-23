@@ -1,7 +1,7 @@
 import Login from "../module/login";
 import page404 from "../module/404";
 import App from "../module/app";
-import AppTest from "../module/app/test";
+import AppIndex from "../module/app/index";
 // Routes
 const routes = [{
   path: '/login',
@@ -11,13 +11,10 @@ const routes = [{
   component: App,
   children: [{
     path: '',
-    component: AppTest
+    component: AppIndex
   }, {
     path: '/index',
-    component: AppTest
-  }, {
-    path: '/test',
-    component: AppTest
+    component: AppIndex
   }, {
     path: '/category/*',
     component: page404
