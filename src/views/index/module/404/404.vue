@@ -31,6 +31,11 @@
     <div class="page-content">
       <h2 class="title">FEZ Layout</h2>
       <h3 class="desc">现代响应式的多终端布局框架</h3>
+      <p>
+        <a href="https://github.com/furic-zhao/fez-layout" target="_blank">
+          <i class="fa fa-github"></i> Github项目地址：https://github.com/furic-zhao/fez-layout
+        </a>
+      </p>
     </div>
   </div>
 </template>

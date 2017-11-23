@@ -36,7 +36,11 @@
       <p>使用FEZ工程自动化快速进入开发</p>
       <p>使用Less模块化管理界面样式、使用Less变量快速修改界面配色方案</p>
       <p>可以和Bootstrap、Material Design、ElementUI、Iview、AntDisign等使用Vue、React、Angular或Jquery的第三方优秀的UI框架完美兼容的配合使用。</p>
-      <a href="https://github.com/furic-zhao/fez-layout" target="_blank"><i class="fa fa-github"></i> Github项目地址：https://github.com/furic-zhao/fez-layout</a>
+      <p>
+        <a href="https://github.com/furic-zhao/fez-layout" target="_blank">
+          <i class="fa fa-github"></i> Github项目地址：https://github.com/furic-zhao/fez-layout
+        </a>
+      </p>
     </div>
   </div>
 </template>
