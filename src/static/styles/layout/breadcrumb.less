@@ -1,0 +1,48 @@
+.fezlay-breadcrumb:after,
+.fezlay-breadcrumb:before,
+{
+  display: table;
+  content: ""
+}
+
+.fezlay-breadcrumb:after {
+  clear: both
+}
+
+.fezlay-breadcrumb {
+  font-size: 13px;
+  line-height: 1
+}
+
+.fezlay-breadcrumb__separator {
+  margin: 0 8px;
+  color: #bfcbd9
+}
+
+.fezlay-breadcrumb__item {
+  float: left
+}
+
+.fezlay-breadcrumb__item:last-child .fezlay-breadcrumb__item__inner,
+.fezlay-breadcrumb__item:last-child .fezlay-breadcrumb__item__inner a,
+.fezlay-breadcrumb__item:last-child .fezlay-breadcrumb__item__inner a:hover,
+.fezlay-breadcrumb__item:last-child .fezlay-breadcrumb__item__inner:hover {
+  color: #97a8be;
+  cursor: text
+}
+
+.fezlay-breadcrumb__item:last-child .fezlay-breadcrumb__separator {
+  display: none
+}
+
+.fezlay-breadcrumb__item__inner,
+.fezlay-breadcrumb__item__inner a {
+  transition: color .15s linear;
+  color: #48576a
+}
+
+.fezlay-breadcrumb__item__inner a:hover,
+.fezlay-breadcrumb__item__inner:hover {
+  color: #20a0ff;
+  cursor: pointer
+}

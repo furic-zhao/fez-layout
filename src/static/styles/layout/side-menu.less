@@ -1,0 +1,247 @@
+.showSlide {
+  animation-duration: .2s;
+  animation-name: slideInLeft;
+}
+
+.hideSlide {
+  animation-duration: .2s;
+  animation-name: slideOutLeft;
+}
+
+.main-sidebar {
+  background-color: @sidebar-bg; //侧边栏背景颜色
+  position: fixed;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  height: calc(~"100vh - 50px");
+  width: 44px;
+  z-index: 810;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  -moz-transition: -moz-transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  -o-transition: -o-transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.expandSide {
+  width: 230px;
+}
+
+
+.fezlay-menu-item,
+.fezlay-submenu__title {
+  height: 56px;
+  line-height: 56px;
+  font-size: 14px;
+  color: @sidebar-menu-text-color; //导航字体颜色
+  padding: 0 20px;
+  cursor: pointer;
+  position: relative;
+  transition: border-color .3s, background-color .3s, color .3s;
+  box-sizing: border-box;
+  white-space: nowrap
+}
+
+.fezlay-menu {
+  border-radius: 2px;
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding-left: 0;
+}
+
+.fezlay-menu:after,
+.fezlay-menu:before {
+  display: table;
+  content: ""
+}
+
+.fezlay-menu:after {
+  clear: both
+}
+
+.fezlay-menu li {
+  list-style: none
+}
+
+.fezlay-menu-style .fezlay-submenu .fezlay-menu-item {
+  height: 45px;
+  line-height: 45px;
+}
+
+.fezlay-menu-style .fezlay-menu-item,
+.fezlay-menu-style .fezlay-submenu__title {
+  height: 45px;
+  line-height: 45px;
+}
+
+.main-sidebar .fezlay-menu--collapse {
+  width: 44px;
+}
+
+.main-sidebar .fezlay-menu--collapse>.fezlay-menu-item,
+.main-sidebar .fezlay-menu--collapse>.fezlay-submenu>.fezlay-submenu__title {
+  padding-left: 13px !important;
+}
+
+.fezlay-menu-item.is-active {
+  color: @sidebar-submenu-text-hover-color; //当前选中的分类字体颜色
+}
+
+.fezlay-menu--collapse {
+  width: 64px
+}
+
+.fezlay-menu--collapse>.fezlay-menu-item [class^=fezlay-icon-],
+.fezlay-menu--collapse>.fezlay-submenu>.fezlay-submenu__title [class^=fezlay-icon-] {
+  margin: 0;
+  vertical-align: middle;
+  width: 24px;
+  text-align: center
+}
+
+.fezlay-menu--collapse>.fezlay-menu-item .fezlay-submenu__icon-arrow,
+.fezlay-menu--collapse>.fezlay-submenu>.fezlay-submenu__title .fezlay-submenu__icon-arrow {
+  display: none
+}
+
+.fezlay-menu--collapse>.fezlay-menu-item span,
+.fezlay-menu--collapse>.fezlay-submenu>.fezlay-submenu__title span {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+  display: inline-block
+}
+
+.fezlay-menu--collapse .fezlay-menu .fezlay-submenu {
+  min-width: 200px
+}
+
+.fezlay-menu--collapse .fezlay-submenu {
+  position: relative
+}
+
+.fezlay-menu--collapse .fezlay-submenu .fezlay-menu {
+  position: absolute;
+  margin-left: 5px;
+  top: 0;
+  left: 100%;
+  z-index: 10
+}
+
+.fezlay-menu--collapse .fezlay-submenu.is-opened>.fezlay-submenu__title .fezlay-submenu__icon-arrow {
+  -ms-transform: none;
+  transform: none
+}
+
+.fezlay-menu-item * {
+  vertical-align: middle
+}
+
+.fezlay-menu-item:first-child {
+  margin-left: 0
+}
+
+.fezlay-menu-item:last-child {
+  margin-right: 0
+}
+
+.fezlay-submenu [class^=fezlay-icon-] {
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 24px;
+  text-align: center
+}
+
+.fezlay-submenu {
+  &.is-opened {
+    >.fezlay-submenu__title {
+      background-color: @sidebar-submenu-title-bg;
+    }
+    .fezlay-menu-item {
+      &:hover {
+        color: @sidebar-submenu-text-hover-color;
+      }
+      &.is-active {
+        position: relative;
+        &:before {
+          background-color: @sidebar-submenu-text-hover-color;
+          content: "";
+          height: 8px;
+          width: 8px;
+          top: 50%;
+          left: 23px;
+          right: auto;
+          margin-top: -4px;
+          position: absolute;
+          z-index: 1;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.fezlay-submenu .fezlay-menu {
+  background-color: @sidebar-submenu-bg; //下级菜单颜色背景
+}
+
+
+/*菜单收缩后默认使用侧边栏背景*/
+
+.fezlay-menu--collapse {
+  .fezlay-submenu .fezlay-menu {
+    background-color: @sidebar-bg; //下级菜单颜色背景
+  }
+}
+
+
+.fezlay-submenu .fezlay-menu-item {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 45px;
+  min-width: 200px
+}
+
+.fezlay-submenu.is-opened>.fezlay-submenu__title .fezlay-submenu__icon-arrow {
+  -ms-transform: rotate(180deg);
+  transform: rotateZ(180deg)
+}
+
+.fezlay-submenu.is-active .fezlay-submenu__title {
+  border-bottom-color: #20a0ff;
+}
+
+.fezlay-submenu__title {
+  position: relative
+}
+
+.fezlay-submenu__title * {
+  vertical-align: middle
+}
+
+.fezlay-submenu__icon-arrow {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  margin-top: -7px;
+  transition: transform .3s;
+  font-size: 12px
+}
+
+.vue-scrollbar {
+  height: calc(~"100vh - 50px")
+}
+
+.main-sidebar .fezlay-scrollbar__bar.is-vertical {
+  display: none;
+}
+
+.sidebar {
+  min-height: 450px;
+}
+
+.fezlay-menu .fa {
+  margin-right: 10px;
+}

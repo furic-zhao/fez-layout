@@ -1,0 +1,41 @@
+{
+  "name": "fez-layout",
+  "version": "1.0.0",
+  "description": "现代响应式的多终端UI布局开发框架",
+  "main": "",
+  "license": "MIT",
+  "homepage": "http://fezlayout.hestudy.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "vue": "^2.5.3",
+    "vue-router": "^3.0.1",
+    "font-awesome": "^4.7.0",
+    "vuex": "^3.0.1"
+  },
+  "overrides": {
+    "vue": {
+      "main": [
+        "dist/vue.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css",
+        "fonts/FontAwesome.otf",
+        "fonts/fontawesome-webfont.eot",
+        "fonts/fontawesome-webfont.svg",
+        "fonts/fontawesome-webfont.ttf",
+        "fonts/fontawesome-webfont.woff",
+        "fonts/fontawesome-webfont.woff2"
+      ]
+    }
+  }
+}

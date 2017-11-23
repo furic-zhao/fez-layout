@@ -1,0 +1,24 @@
+{
+  "name": "fez-layout",
+  "version": "1.0.0",
+  "description": "现代响应式的多终端UI布局开发框架",
+  "keywords": "",
+  "homepage": "http://fezlayout.hestudy.com",
+  "license": "MIT",
+  "author": "Furic.zhao",
+  "main": "",
+  "scripts": {},
+  "directories": {},
+  "dependencies": {
+    "path-to-regexp": "^2.1.0",
+    "vue-progressbar": "^0.7.3",
+    "vuex-router-sync": "^4.3.0"
+  },
+  "devDependencies": {},
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": "./shim.js"
+}

@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+.content-scrollbar {
+  height: calc(~"100vh - 50px");
+}
+
+.content-wrapper {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+  -moz-transition: -moz-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+  -o-transition: -o-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+  margin-left: 230px;
+  padding-top: 50px;
+  .fezlay-scrollbar__bar.is-vertical {
+    display: none;
+  }
+  .content {
+    padding: 1.25rem;
+  }
+  &.slideCollapse {
+    margin-left: 44px;
+  }
+  &.mobileSide {
+    margin-left: 0px;
+  }
+}
+
+.horizontal-collapse-transition .fezlay-submenu__title .fezlay-submenu__icon-arrow {
+  transition: .2s;
+  opacity: 0
+}
+
+
+.fezlay-fade-in-enter-active,
+.fezlay-fade-in-leave-active,
+.fezlay-zoom-in-center-enter-active,
+.fezlay-zoom-in-center-leave-active {
+  transition: all .3s cubic-bezier(.55, 0, .1, 1)
+}
+
+.fezlay-zoom-in-bottom-enter-active,
+.fezlay-zoom-in-bottom-leave-active,
+.fezlay-zoom-in-left-enter-active,
+.fezlay-zoom-in-left-leave-active,
+.fezlay-zoom-in-top-enter-active,
+.fezlay-zoom-in-top-leave-active {
+  transition: transform .3s cubic-bezier(.23, 1, .32, 1) .1s, opacity .3s cubic-bezier(.23, 1, .32, 1) .1s
+}
+
+.fezlay-zoom-in-center-enter,
+.fezlay-zoom-in-center-leave-active {
+  opacity: 0;
+  -ms-transform: scaleX(0);
+  transform: scaleX(0)
+}
+
+.fezlay-zoom-in-top-enter-active,
+.fezlay-zoom-in-top-leave-active {
+  opacity: 1;
+  -ms-transform: scaleY(1);
+  transform: scaleY(1);
+  -ms-transform-origin: center top;
+  transform-origin: center top
+}
+
+.fezlay-zoom-in-top-enter,
+.fezlay-zoom-in-top-leave-active {
+  opacity: 0;
+  -ms-transform: scaleY(0);
+  transform: scaleY(0)
+}
+
+.fezlay-zoom-in-bottom-enter-active,
+.fezlay-zoom-in-bottom-leave-active {
+  opacity: 1;
+  -ms-transform: scaleY(1);
+  transform: scaleY(1);
+  -ms-transform-origin: center bottom;
+  transform-origin: center bottom
+}
+
+.fezlay-zoom-in-bottom-enter,
+.fezlay-zoom-in-bottom-leave-active {
+  opacity: 0;
+  -ms-transform: scaleY(0);
+  transform: scaleY(0)
+}
+
+.fezlay-zoom-in-left-enter-active,
+.fezlay-zoom-in-left-leave-active {
+  opacity: 1;
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -ms-transform-origin: top left;
+  transform-origin: top left
+}
+
+.fezlay-zoom-in-left-enter,
+.fezlay-zoom-in-left-leave-active {
+  opacity: 0;
+  -ms-transform: scale(.45, .45);
+  transform: scale(.45, .45)
+}
+
+.collapse-transition {
+  transition: .3s height ease-in-out, .3s padding-top ease-in-out, .3s padding-bottom ease-in-out
+}
+
+.horizontal-collapse-transition {
+  transition: .3s width ease-in-out, .3s padding-left ease-in-out, .3s padding-right ease-in-out
+}

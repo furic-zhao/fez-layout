@@ -1,0 +1,109 @@
+.animated {
+  animation-duration: .2s;
+}
+
+.main-header {
+  position: fixed;
+  min-width: 100%;
+  box-shadow: 0 2px 3px hsla(0, 0%, 7%, .1), 0 0 0 1px hsla(0, 0%, 7%, .1);
+  z-index: 1999;
+  animation-name: slideInDown;
+  animation-fill-mode: both;
+  color: @header-text-color;
+  background-color: @header-bg; //顶部背景颜色
+  a {
+    text-decoration: none;
+    color: @header-text-color;
+  }
+  &.closeLogo {
+    .navbar {
+      margin-left: 44px;
+    }
+    .logo {
+      width: 44px;
+      .logo-lg b {
+        display: none;
+      }
+    }
+    .navbar {
+      .sidebar-toggle {
+        &:before {
+          content: "\f03c";
+        }
+      }
+    }
+  }
+  &.mobileLogo {
+    .navbar {
+      .sidebar-toggle {
+        &:before {
+          content: "\f0c9";
+        }
+      }
+    }
+  }
+  .navbar {
+    -webkit-transition: margin-left 0.3s ease-in-out;
+    -o-transition: margin-left 0.3s ease-in-out;
+    transition: margin-left 0.3s ease-in-out;
+    margin-bottom: 0;
+    margin-left: 230px;
+    border: none;
+    min-height: 50px;
+    border-radius: 0;
+    background-color: @header-navbar-bg;
+    .sidebar-toggle {
+      display: block;
+      float: left;
+      background-color: transparent;
+      background-image: none;
+      padding: 15px 15px;
+      font-family: fontAwesome;
+      line-height: 20px;
+      &:before {
+        content: "\f03b";
+      }
+    }
+  }
+  .logo {
+    -webkit-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    display: block;
+    float: left;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    width: 230px;
+    font-weight: 300;
+    overflow: hidden;
+    text-decoration: none;
+    border-bottom: 0 solid transparent;
+    .logo-lg {
+      display: block;
+      height: 38px;
+      line-height: 38px;
+      margin-top: 6px;
+    }
+  }
+  .navbar-custom-menu {
+    float: right;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .main-header {
+    .logo {
+      display: none;
+      width: 100%;
+      float: none;
+    }
+    .navbar {
+      margin: 0;
+      width: 100%;
+      float: none;
+    }
+  }
+}
