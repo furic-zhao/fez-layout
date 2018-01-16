@@ -6,15 +6,22 @@
   "homepage": "http://fezlayout.hestudy.com",
   "license": "MIT",
   "author": "Furic.zhao",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/furic-zhao/fez-layout"
+  },
   "main": "",
   "scripts": {},
   "directories": {},
+  "devDependencies": {
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
   "dependencies": {
     "path-to-regexp": "^2.1.0",
     "vue-progressbar": "^0.7.3",
-    "vuex-router-sync": "^4.3.0"
+    "vuex-router-sync": "^4.3.2"
   },
-  "devDependencies": {},
   "browserify": {
     "transform": [
       "browserify-shim"
